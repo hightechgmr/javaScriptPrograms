@@ -1,0 +1,12 @@
+let x = Number("123")
+let y = Number("123xyz")
+let z = Number("")
+let p = Number(" ")
+let q = Number(NaN)
+let r = Number(undefined)
+let a = Number(null)
+let b = Number(true)
+let c = Number(false)
+
+console.table([typeof x, typeof y, typeof z, typeof p, typeof q, typeof r, typeof a, typeof b, typeof c])
+console.table([x,y,z,p,q,r,a,b,c])
