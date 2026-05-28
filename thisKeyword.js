@@ -1,11 +1,18 @@
 const person = {
-  firstName: "John",
-  lastName: "Doe",
-  id: 5566,
-  getId: function() {
-    return this.id;
-  }
-};
+	name: "Harshit",
+	course: "Bachelor of Computer Applications",
+	university: "Kumaun University",
+	percentage: 80,
+	
+	// getMarks() {
+	// 	console.log(this.percentage);
+	// }
 
-let number = person.getId();
-console.log(number);
+		// Alternatively
+		getMarks: function(){
+			console.log(this.percentage);
+		}
+
+}
+
+person.getMarks();
