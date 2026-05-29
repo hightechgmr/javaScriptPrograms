@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Temperature Converter</h2>
+<p id="demo">Result will appear here.</p>
+
+<script>
+  // 1. Get user choice
+  let choice = prompt("Enter 1 for Celsius to Fahrenheit\nEnter 2 for Fahrenheit to Celsius");
+
+  if (choice === '1') {
+    // Celsius to Fahrenheit
+    let inputCelsius = prompt("Enter temperature in Celsius:");
+    
+    // Validate input
+    if (inputCelsius === null || inputCelsius === "") {
+      document.getElementById("demo").innerHTML = "Input cancelled or empty.";
+    } else {
+      let tempC = Number(inputCelsius);
+      
+      if (!isNaN(tempC)) {
+        let celToFer = (c) => ((c * 9/5) + 32);
+        let result = celToFer(tempC);
+        // Display with 2 decimal places and degree symbol
+        document.getElementById("demo").innerHTML = `<strong>${tempC}°C</strong> is <strong>${result.toFixed(2)}°F</strong>`;
+      } else {
+        document.getElementById("demo").innerHTML = "Invalid input: Please enter a numeric value.";
+      }
+    }
+
+  } else if (choice === '2') {
+    // Fahrenheit to Celsius
+    let inputFahrenheit = prompt("Enter temperature in Fahrenheit:");
+
+    // Validate input
+    if (inputFahrenheit === null || inputFahrenheit === "") {
+      document.getElementById("demo").innerHTML = "Input cancelled or empty.";
+    } else {
+      let tempF = Number(inputFahrenheit);
+
+      if (!isNaN(tempF)) {
+        let ferToCel = (f) => ((f - 32) * 5/9);
+        let result = ferToCel(tempF);
+        // Display with 2 decimal places and degree symbol
+        document.getElementById("demo").innerHTML = `<strong>${tempF}°F</strong> is <strong>${result.toFixed(2)}°C</strong>`;
+      } else {
+        document.getElementById("demo").innerHTML = "Invalid input: Please enter a numeric value.";
+      }
+    }
+
+  } else {
+    // Invalid choice
+    alert("Invalid Input: Please refresh and enter 1 or 2.");
+    document.getElementById("demo").innerHTML = "Operation cancelled due to invalid selection.";
+  }
+</script>
+
+</body>
+</html>   
