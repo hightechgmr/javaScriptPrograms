@@ -1,10 +1,10 @@
-// function paraArg(x){
-//      a = 10;
-//      console.log(x);
-// }
+function paraArg(x){
+     a = 10;
+     console.log(x);
+}
 
-// let a = 20
-// paraArg(a)
+let a = 20
+paraArg(a)
 
 function paraArg(x){
      a.name = "hightech"
